@@ -1,20 +1,5 @@
 import { GraphQLServer } from 'graphql-yoga'
-
-
-//--temporary database--
-const choijun0 = {
-  name : "choi",
-  age : 22,
-  job : "soldier"
-}
-//-----------------------
-
-
-const resolvers = {
-  Query: {
-    person : () => choijun0
-  },
-}
+import {resolvers} from "./graphql/resolvers.js"
 
 const server = new GraphQLServer({ 
   typeDefs : "graphql/schema.graphql", 
