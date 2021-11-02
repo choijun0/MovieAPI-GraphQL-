@@ -1,11 +1,20 @@
-type Person {
-  id : String!
+type Movie {
+  id : Int!
   name : String!
-  age : Int!
-  job : String!
+  score : Int!
 }
 
 type Query {
-  people : [Person]!
-  person(id:Int!) : Person
+  movies : [Movie]!
+  movie(id:Int!) : Movie 
 } 
+
+type Mutation {
+  deleteElement(id:Int!) : [Movie]!
+  addElement(name:String!, score:Int!) : [Movie]!
+}
+
+
+
+
+
